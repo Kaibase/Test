@@ -1,0 +1,52 @@
+body,#pagebox{
+    background-image: url("backgroundimg/pastel_00001.jpg");
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+h1{
+    font-size: 70px;
+    margin: 0;
+    text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.tile-0 {
+    background: rgb(255, 0, 0);
+}
+.tile-1 {
+    background: rgb(251, 255, 0);
+}
+.tile-2 {
+    background: rgb(51, 255, 0);
+}
+.tile-3 {
+    background: rgb(0, 208, 255);
+}
+.tile-4 {
+    background: rgb(208, 0, 255);
+}
+.tile-5 {
+    background: rgb(0, 26, 255);
+}
+.tile-6 {
+    background: rgb(255, 94, 0);
+}
+.tile-7 {
+    background: rgb(222, 131, 131);
+}
+.tile-8 {
+    background: rgb(155, 103, 144);
+}
+.tile-none {
+    background: rgb(228, 228, 228);
+}
+
+.reset{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
