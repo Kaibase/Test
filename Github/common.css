@@ -1,52 +1,194 @@
-body,#pagebox{
+body {
     background-image: url("backgroundimg/pastel_00001.jpg");
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    position: relative;
+    margin: 0 auto;
+    text-align: center;
 }
 
-h1{
-    font-size: 70px;
-    margin: 0;
+a {
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 100px;
     text-align: center;
+    margin: 0;
     font-family: 'DotGothic16', sans-serif;
+    animation: pururun 1.2s linear 0.2s 1;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+.panel {
+    width: 400px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile-wrapper {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+
+.tile {
+    width: 100%;
+    height: 100%;
+    line-height: 97px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 26px;
+    cursor: pointer;
 }
 
 .tile-0 {
     background: rgb(255, 0, 0);
 }
+
 .tile-1 {
     background: rgb(251, 255, 0);
 }
+
 .tile-2 {
     background: rgb(51, 255, 0);
 }
+
 .tile-3 {
     background: rgb(0, 208, 255);
 }
+
 .tile-4 {
     background: rgb(208, 0, 255);
 }
+
 .tile-5 {
-    background: rgb(0, 26, 255);
+    background: rgb(51, 71, 255);
 }
+
 .tile-6 {
-    background: rgb(255, 94, 0);
+    background: rgb(255, 121, 43);
 }
+
 .tile-7 {
-    background: rgb(222, 131, 131);
+    background: rgb(255, 0, 0);
 }
+
 .tile-8 {
-    background: rgb(155, 103, 144);
+    background: rgb(255, 108, 223);
 }
+
+.tile-9 {
+    background: rgb(254, 255, 213);
+}
+
+.tile-10 {
+    background: rgb(188, 255, 180);
+}
+
+.tile-11 {
+    background: rgb(184, 240, 255);
+}
+
+.tile-12 {
+    background: rgb(255, 186, 186);
+}
+
+.tile-13 {
+    background: rgb(228, 175, 255);
+}
+
+.tile-14 {
+    background: rgb(87, 255, 143);
+}
+
+.tile-15 {
+    background: rgb(141, 83, 255);
+}
+
 .tile-none {
     background: rgb(228, 228, 228);
 }
 
-.reset{
+.reset {
+    width: 300px;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 16px;
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    border: solid 2px rgb(51, 51, 51);
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+}
+
+.reset:hover {
+    border-color: transparent;
+}
+
+.pushdown:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    z-index: -1;
+    top: 4px;
+    left: 0;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgb(254, 130, 207);
+}
+
+/*hoverの際にY軸に4pxずらす*/
+.pushdown:hover span {
+  transform: translateY(4px);
+}
+
+@keyframes pururun {
+    20% {
+        transform: scale(1.0, 1.0) translateY(0px);
+        margin-left: 0;
+    }
+
+    30% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+
+    70% {
+        transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg);
+    }
+
+    75% {
+        transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg);
+    }
+
+    80% {
+        transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg);
+    }
+
+    85% {
+        transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg);
+    }
+
+    90% {
+        transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg);
+    }
+
+    95% {
+        transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
 }
