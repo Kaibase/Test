@@ -64,7 +64,7 @@ window.onload = function () {
         }
     }
 
-    // パズル生成(?????)
+    // パズル生成
     function make(puzzle) {
         var $Panel = document.getElementById('js-show-panel');
         // すでにあるパズルを一旦削除
